@@ -11,3 +11,8 @@ sky:
     access-key-id: LTAI5tPVDTe7qZCJUbDkCMUb
     access-key-secret: iKcqwqv4HxFR2sIMP3l6E9WMLClEiB
     bucket-name: liang-sky-take-out
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+    database: 10
