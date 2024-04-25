@@ -8,6 +8,7 @@ import com.sky.service.SetmealService;
 import com.sky.vo.DishVarietyVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,7 @@ import java.util.List;
 @RestController("userSetmealController")
 @RequestMapping("/user/setmeal")
 @Api(tags = "C端-套餐浏览接口")
+@Slf4j
 public class SetmealController {
     @Autowired
     private SetmealService setmealService;
@@ -34,6 +36,7 @@ public class SetmealController {
     @ApiOperation("根据分类id查询套餐")
     @Cacheable(cacheNames = "setmealCache",key = "#categoryId")//key:setmealCache::categoryId
     public Result<List<Setmeal>> list(Long categoryId){
+        log.info("查询到id为{}的套餐",categoryId);
         Setmeal setmeal = new Setmeal();
         setmeal.setCategoryId(categoryId);
         setmeal.setStatus(StatusConstant.ENABLE);
