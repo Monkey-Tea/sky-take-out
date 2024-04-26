@@ -9,7 +9,7 @@ import java.util.List;
 public interface AddressBookMapper {
 
     /**
-     * 新增
+     * 新增地址
      * @param addressBook
      */
     @Insert("insert into address_book" +
