@@ -61,7 +61,7 @@ public class OrderController {
     @ApiOperation("查询订单详情")
     public Result<OrderVO> details(@PathVariable("id") Long id){
         log.info("查询到订单{}",id);
-        OrderVO orderVO = orderService.details(id);//客户端实现过
+        OrderVO orderVO = orderService.details(id);//客户端实现过,代码复用
         return Result.success(orderVO);
     }
 
