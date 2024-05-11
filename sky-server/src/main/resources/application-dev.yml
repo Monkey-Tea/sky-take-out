@@ -8,8 +8,8 @@ sky:
     password: "123456"
   alioss:
     endpoint: oss-cn-guangzhou.aliyuncs.com
-    access-key-id: LTAI5tPVDTe7qZCJUbDkCMUb
-    access-key-secret: iKcqwqv4HxFR2sIMP3l6E9WMLClEiB
+    access-key-id: LTAI5tBBKBnA5MjwCkfJbjig
+    access-key-secret: beuQAbjWH39s0CZwKS8Kbqg4JwOoLa
     bucket-name: liang-sky-take-out
   redis:
     host: localhost
