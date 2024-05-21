@@ -31,7 +31,7 @@ private SetmealService setmealService;
      */
     @PostMapping
     @ApiOperation("新增套餐")
-    @Cacheable(cacheNames = "setmealCache",key = "#categoryId")//key:setmealCache::categoryId
+    @Cacheable(cacheNames = "setmealCache",key = "#setmealDTO.categoryId")//key:setmealCache::categoryId
     public Result save(@RequestBody SetmealDTO setmealDTO){
         log.info("新增套餐:{}",setmealDTO);
         setmealService.saveWithDish(setmealDTO);
