@@ -33,6 +33,7 @@ public class AddressBookServiceImpl implements AddressBookService {
      * @return
      */
     public List<AddressBook> list(AddressBook addressBook) {
+
         return addressBookMapper.list(addressBook);
     }
 
